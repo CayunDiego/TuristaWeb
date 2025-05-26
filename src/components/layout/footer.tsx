@@ -8,7 +8,7 @@ const Footer = () => {
     <>
       <section className="w-full bg-secondary">
         <div className="bg-gray-300 flex items-center justify-center flex-col p-8 shadow-lg">
-          <h3 className="text-2xl font-semibold text-gray-700 mb-6">
+          <h3 className="text-2xl font-semibold text-gray-700 mb-6 text-center">
             Banner convicente y creativo
           </h3>
           <div className="px-4">
