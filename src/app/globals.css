@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* White */
+    --foreground: 240 10% 3.9%; /* Default dark gray */
+
+    --card: 0 0% 100%; /* White cards */
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%; /* White popovers */
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 25 95% 53%; /* #F97316 - Bright Orange */
+    --primary-foreground: 0 0% 100%; /* White text on orange */
+
+    --secondary: 240 4.8% 95.9%; /* Light gray for some backgrounds e.g. plan cards */
+    --secondary-foreground: 240 5.9% 10%; /* Dark text on light gray */
+
+    --muted: 240 4.8% 95.9%; /* Light gray */
+    --muted-foreground: 240 3.8% 46.1%; /* Muted text, grayish */
+
+    --accent: 25 95% 53%; /* Orange as accent */
+    --accent-foreground: 0 0% 100%; /* White text on accent */
+
+    --destructive: 0 84.2% 60.2%; /* Default destructive */
+    --destructive-foreground: 0 0% 98%; /* Default destructive foreground */
+
+    --border: 240 5.9% 90%; /* Light gray border */
+    --input: 240 5.9% 90%;  /* Light gray input border */
+    --ring: 25 95% 53%;   /* Orange ring for focus, matching primary */
+
+    --radius: 0.5rem; /* Default radius */
+
+    /* Chart colors */
+    --chart-1: 25 95% 53%; /* Primary */
+    --chart-2: 180 70% 45%;  /* A teal color for contrast if needed */
+    --chart-3: 210 80% 55%; /* A blue color */
+    --chart-4: 45 85% 58%;  /* A yellow color */
+    --chart-5: 300 75% 60%;  /* A purple color */
+  }
+
+  .dark {
+    --background: 240 10% 3.9%; /* Dark Gray */
+    --foreground: 0 0% 98%; /* Light text */
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 25 95% 53%; /* Orange remains primary */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 3.7% 15.9%; /* Darker secondary */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 25 95% 53%; /* Orange remains accent */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 25 95% 53%; /* Orange ring */
+
+    --chart-1: 25 95% 53%;
+    --chart-2: 180 70% 45%;
+    --chart-3: 210 80% 55%;
+    --chart-4: 45 85% 58%;
+    --chart-5: 300 75% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans; /* Use --font-geist-sans through var */
+  }
+}
