@@ -23,7 +23,7 @@ const GenerateWebsiteCopyInputSchema = z.object({
   uniqueSellingPoints: z
     .string()
     .describe(
-      'Unique selling points of the business, separated by commas (e.g., stunning views, excellent service, prime location).'n    ),
+      'Unique selling points of the business, separated by commas (e.g., stunning views, excellent service, prime location).'    ),
   websiteSection: z
     .string()
     .describe('The specific section of the website to generate copy for (e.g., About Us, Services, Contact).'),
