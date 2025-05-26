@@ -16,7 +16,7 @@ const GenerateWebsiteCopyInputSchema = z.object({
   businessType: z
     .string()
     .describe(
-      'The type of tourism business (e.g., hotel, travel agency, tour operator).'n    ),
+      'The type of tourism business (e.g., hotel, travel agency, tour operator).'   ),
   targetAudience: z
     .string()
     .describe('The target audience for the business (e.g., families, couples, adventurers).'),
