@@ -6,15 +6,11 @@ const Footer = () => {
   const darkButtonStyle = "bg-gray-800 text-white hover:bg-gray-700 shadow-md";
   return (
     <>
-      <section className="w-full py-12 md:py-16 bg-secondary">
-        <div className="container mx-auto text-center">
-          <div className="bg-gray-300 p-8 shadow-lg">
-            <h3 className="text-2xl font-semibold text-gray-700 mb-6">
-              Banner convicente y creativo
-            </h3>
-            {/* This is a placeholder for the creative banner. 
-                You can replace this div with an Image component or complex HTML structure. */}
-          </div>
+      <section className="w-full bg-secondary">
+        <div className="bg-gray-300 flex items-center justify-center flex-col p-8 shadow-lg">
+          <h3 className="text-2xl font-semibold text-gray-700 mb-6">
+            Banner convicente y creativo
+          </h3>
           <div className="px-4">
             <Button size="lg" className={`${darkButtonStyle} px-8 py-4 text-lg mt-8 whitespace-normal sm:pt-4 sm:pb-4 h-auto	`}>
               <Phone className="mr-2 h-5 w-5" />
