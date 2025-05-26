@@ -7,18 +7,20 @@ const Footer = () => {
   return (
     <>
       <section className="w-full py-12 md:py-16 bg-secondary">
-        <div className="container mx-auto px-4 text-center">
-          <div className="bg-gray-300 p-8 rounded-lg shadow-lg">
+        <div className="container mx-auto text-center">
+          <div className="bg-gray-300 p-8 shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-700 mb-6">
               Banner convicente y creativo
             </h3>
             {/* This is a placeholder for the creative banner. 
                 You can replace this div with an Image component or complex HTML structure. */}
           </div>
-          <Button size="lg" className={`${darkButtonStyle} px-8 py-4 text-lg mt-8`}>
-            <Phone className="mr-2 h-5 w-5" />
-            ¡Agenda hoy tu llamada gratuita!
-          </Button>
+          <div className="px-4">
+            <Button size="lg" className={`${darkButtonStyle} px-8 py-4 text-lg mt-8 whitespace-normal sm:pt-4 sm:pb-4 h-auto	`}>
+              <Phone className="mr-2 h-5 w-5" />
+              ¡Agenda hoy tu llamada gratuita!
+            </Button>
+          </div>
         </div>
       </section>
       <footer className="border-t border-border/40 py-8 text-center text-muted-foreground bg-white">
