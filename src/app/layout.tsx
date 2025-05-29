@@ -1,16 +1,15 @@
 import type { Metadata } from 'next';
-import { GeistSans } from 'geist/font/sans';
-import { GeistMono } from 'geist/font/mono';
+import { GeistMono } from 'geist/font/mono'; // Keep GeistMono for monospace
 import './globals.css';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 
-const geistSans = GeistSans;
+// Remove GeistSans import as Kumbh Sans will be the default via Tailwind config
 const geistMono = GeistMono;
 
 export const metadata: Metadata = {
-  title: 'TuristaWeb - Tourism Website Templates',
+  title: 'Web para Turismo',
   description: 'Find and customize beautiful website templates for your tourism business.',
 };
 
@@ -21,11 +20,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Style+Script&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased flex flex-col min-h-screen`}
+        className={`${geistMono.variable} font-sans antialiased flex flex-col min-h-screen`} // font-sans will now apply Kumbh Sans
       >
         <Header />
-        <main className="flex-grow container mx-auto px-4 py-8">
+        <main className="flex-grow">
           {children}
         </main>
         <Footer />

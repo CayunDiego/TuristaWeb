@@ -1,25 +1,46 @@
 
 import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
+import { Leaf, MessageSquare } from "lucide-react";
+import Image from 'next/image';
 
 const Footer = () => {
-  const darkButtonStyle = "bg-gray-800 text-white hover:bg-gray-700 shadow-md";
+  const darkButtonStyle = "bg-foreground text-primary hover:bg-foreground/90 shadow-md rounded-lg font-bold text-base leading-none tracking-normal";
+  const whatsappLink = "https://wa.me/5491123919463?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20dise%C3%B1o%20web%20para%20turismo.";
+  
   return (
     <>
-      <section className="w-full bg-secondary">
-        <div className="bg-gray-300 flex items-center justify-center flex-col p-8 shadow-lg">
-          <h3 className="text-2xl font-semibold text-gray-700 mb-6 text-center">
-            Banner convicente y creativo
-          </h3>
-          <div className="px-4">
-            <Button size="lg" className={`${darkButtonStyle} px-8 py-4 text-lg mt-8 whitespace-normal sm:pt-4 sm:pb-4 h-auto	`}>
-              <Phone className="mr-2 h-5 w-5" />
-              ¡Agenda hoy tu llamada gratuita!
-            </Button>
-          </div>
+      {/* Enfoque cercano y natural Section */}
+      <section className="w-full py-16 md:py-28 relative" style={{ color: 'hsl(var(--section-dark-fg))' }}>
+        <div className="absolute inset-0 -z-20">
+            <Image
+                src="/images/paisaje-3.jpg"
+                alt="Paisaje de fondo para la sección de enfoque, posiblemente un glaciar o naturaleza serena."
+                layout="fill"
+                objectFit="cover"
+                quality={80}
+                data-ai-hint="glacier nature"
+            />
+        </div>
+        <div className="absolute inset-0 -z-10" style={{ backgroundColor: '#0000008C' }}></div> {/* Overlay oscuro */}
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="text-4xl font-bold mb-6">🌿 Enfoque cercano y natural</h2>
+          <p className="text-xl mb-8 max-w-lg mx-auto">
+            Convertir &lt;datos&gt; en reservas. <br /> Diseñamos la web que tu alojamiento necesita para destacar y vender más.
+          </p>
+          <Button 
+            size="lg" 
+            className={`${darkButtonStyle} px-10 py-4 text-base border border-[hsl(var(--section-teal-bg))]`}
+            asChild
+          >
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+              Hablar por WhatsApp
+            </a>
+          </Button>
         </div>
       </section>
-      <footer className="border-t border-border/40 py-8 text-center text-muted-foreground bg-white">
+
+      {/* Actual Footer */}
+      <footer className="border-t border-border/20 py-8 text-center text-muted-foreground bg-background">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p>&copy; 2025 Todos los derechos reservados.</p>
         </div>

@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,77 +6,95 @@
 @layer base {
   :root {
     --background: 0 0% 100%; /* White */
-    --foreground: 240 10% 3.9%; /* Default dark gray */
+    --foreground: 211 19% 15%; /* #1F292F */
 
     --card: 0 0% 100%; /* White cards */
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 211 19% 15%; /* #1F292F */
 
     --popover: 0 0% 100%; /* White popovers */
-    --popover-foreground: 240 10% 3.9%;
+    --popover-foreground: 211 19% 15%; /* #1F292F */
 
-    --primary: 25 95% 53%; /* #F97316 - Bright Orange */
-    --primary-foreground: 0 0% 100%; /* White text on orange */
+    --primary: 118 60% 60%; /* #66DB62 - Green for buttons */
+    --primary-foreground: 211 19% 15%; /* #1F292F - Dark text on green buttons */
 
-    --secondary: 240 4.8% 95.9%; /* Light gray for some backgrounds e.g. plan cards */
-    --secondary-foreground: 240 5.9% 10%; /* Dark text on light gray */
+    --secondary: 203 82% 41%; /* #147DBB - Blue for text accents */
+    --secondary-foreground: 0 0% 100%; /* White text on blue background */
 
-    --muted: 240 4.8% 95.9%; /* Light gray */
-    --muted-foreground: 240 3.8% 46.1%; /* Muted text, grayish */
+    --muted: 210 20% 95%; /* Very light gray for subtle backgrounds */
+    --muted-foreground: 210 20% 45%; /* Muted text */
 
-    --accent: 25 95% 53%; /* Orange as accent */
-    --accent-foreground: 0 0% 100%; /* White text on accent */
+    --accent: 118 60% 60%; /* #66DB62 - Green as accent */
+    --accent-foreground: 211 19% 15%; /* #1F292F - Dark text on accent */
 
     --destructive: 0 84.2% 60.2%; /* Default destructive */
     --destructive-foreground: 0 0% 98%; /* Default destructive foreground */
 
-    --border: 240 5.9% 90%; /* Light gray border */
-    --input: 240 5.9% 90%;  /* Light gray input border */
-    --ring: 25 95% 53%;   /* Orange ring for focus, matching primary */
+    --border: 210 20% 88%; /* Light gray border */
+    --input: 210 20% 88%;  /* Light gray input border */
+    --ring: 118 60% 60%;   /* #66DB62 - Green ring for focus */
+    --radius: 0.5rem; /* 8px if base font is 16px */
 
-    --radius: 0.5rem; /* Default radius */
+    /* Custom section backgrounds */
+    --section-dark-bg: 211 19% 15%; /* #1F292F for "¿Qué obtendrás?" and "Enfoque cercano y natural" */
+    --section-dark-fg: 0 0% 98%; /* Light text for dark sections */
 
-    /* Chart colors */
-    --chart-1: 25 95% 53%; /* Primary */
-    --chart-2: 180 70% 45%;  /* A teal color for contrast if needed */
-    --chart-3: 210 80% 55%; /* A blue color */
+    --section-teal-bg: 188 63% 45%; /* #2CA9BC for "Todos los planes se pagan..." */
+    --section-teal-fg: 0 0% 100%;  /* White text on teal */
+
+    --section-dark-blue-bg: 210 50% 20%; /* Dark blue for "¡Estamos listos para iniciar!" */
+    --section-dark-blue-fg: 0 0% 98%;
+
+
+    /* Chart colors (can be adjusted later if charts are used) */
+    --chart-1: 118 60% 60%; /* Primary - Green */
+    --chart-2: 203 82% 41%;  /* Secondary - Blue */
+    --chart-3: 188 63% 45%; /* Teal */
     --chart-4: 45 85% 58%;  /* A yellow color */
     --chart-5: 300 75% 60%;  /* A purple color */
   }
 
   .dark {
-    --background: 240 10% 3.9%; /* Dark Gray */
+    --background: 211 19% 7%; /* Even darker #1F292F */
     --foreground: 0 0% 98%; /* Light text */
 
-    --card: 240 10% 3.9%;
+    --card: 211 19% 10%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 240 10% 3.9%;
+    --popover: 211 19% 10%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 25 95% 53%; /* Orange remains primary */
-    --primary-foreground: 0 0% 100%;
+    --primary: 118 55% 65%; /* Brighter Green for dark mode */
+    --primary-foreground: 211 19% 95%; /* Lighter text on green buttons for dark mode */
 
-    --secondary: 240 3.7% 15.9%; /* Darker secondary */
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 203 75% 55%; /* Brighter Blue for dark mode */
+    --secondary-foreground: 0 0% 90%; /* Light text on blue */
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 210 20% 18%;
+    --muted-foreground: 210 20% 65%;
 
-    --accent: 25 95% 53%; /* Orange remains accent */
-    --accent-foreground: 0 0% 100%;
+    --accent: 118 55% 65%;
+    --accent-foreground: 211 19% 95%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 25 95% 53%; /* Orange ring */
+    --border: 210 20% 25%;
+    --input: 210 20% 25%;
+    --ring: 118 55% 65%;
+    --radius: 0.5rem; /* 8px if base font is 16px */
 
-    --chart-1: 25 95% 53%;
-    --chart-2: 180 70% 45%;
-    --chart-3: 210 80% 55%;
-    --chart-4: 45 85% 58%;
-    --chart-5: 300 75% 60%;
+    --section-dark-bg: 211 19% 15%; /* #1F292F for dark mode */
+    --section-dark-fg: 0 0% 98%;
+    --section-teal-bg: 188 58% 40%; /* Darker teal */
+    --section-teal-fg: 0 0% 98%;
+    --section-dark-blue-bg: 210 50% 15%; /* Darker blue */
+    --section-dark-blue-fg: 0 0% 98%;
+
+    --chart-1: 118 55% 65%;
+    --chart-2: 203 75% 55%;
+    --chart-3: 188 58% 40%;
+    --chart-4: 45 85% 62%;
+    --chart-5: 300 75% 65%;
   }
 }
 
@@ -84,6 +103,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-sans; /* Use --font-geist-sans through var */
+    @apply bg-background text-foreground font-sans;
   }
 }

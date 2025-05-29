@@ -10,8 +10,9 @@ export default {
   theme: {
   	extend: {
       fontFamily: {
-        sans: ["var(--font-geist-sans)"],
+        sans: ['"Kumbh Sans"', 'sans-serif'], // Set Kumbh Sans as default sans-serif
         mono: ["var(--font-geist-mono)"],
+        'kumbh-sans': ['"Kumbh Sans"', 'sans-serif'], // Keep explicit utility class
       },
   		colors: {
   			background: 'hsl(var(--background))',
