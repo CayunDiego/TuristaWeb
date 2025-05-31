@@ -3,19 +3,20 @@
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import Image from 'next/image';
 import {
   Leaf,
-  Download,
 } from 'lucide-react';
+import DownloadButton from '@/components/shared/DownloadButton'; // Import the new component
+import AvatarKath from '@/components/AvatarKath';
+import AvatarKathOriginaul from '@/components/AvatarKathOriginaul';
 
 // Button styles based on the new theme
 const greenButtonStyle = "bg-primary text-primary-foreground hover:bg-primary/90 shadow-md rounded-lg font-bold text-base leading-none tracking-normal";
 // For dark buttons
 const darkButtonStyle = "bg-foreground text-primary hover:bg-foreground/90 shadow-md rounded-lg font-bold text-base leading-none tracking-normal";
 // For the light blue "Más elegido" badge
-const masElegidoBadgeStyle = "bg-[hsl(var(--section-teal-bg))] text-[hsl(var(--section-teal-fg))] px-3 py-1 text-sm font-semibold rounded-full absolute -top-3 right-6 transform translate-x-1/4 -translate-y-1/4 shadow-lg";
+const masElegidoBadgeStyle = "bg-[hsl(var(--section-teal-bg))] text-[hsl(var(--section-teal-fg))] px-3 py-1 text-sm font-semibold rounded-full absolute -top-3 left-1/2 transform -translate-x-1/2 -translate-y-1/4 shadow-lg";
 
 
 export default function LandingPage() {
@@ -25,7 +26,6 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="w-full text-center relative flex flex-col justify-center items-center min-h-[60vh] md:min-h-[75vh] overflow-hidden">
         
-        {/* Decorative SVGs */}
         <Image
             src="/svgs/img1.svg"
             alt="Forma decorativa verde inferior izquierda"
@@ -87,10 +87,8 @@ export default function LandingPage() {
         {/* About Me Section */}
         <section id="about" className="w-full py-12 md:py-20 bg-background">
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
-            <Avatar className="w-32 h-32 md:w-40 md:h-40 shadow-lg">
-              <AvatarImage src="/images/sobremi.png" alt="Katherine Rangel" data-ai-hint="woman profile" />
-              <AvatarFallback>KR</AvatarFallback>
-            </Avatar>
+            <AvatarKath />
+            {/* <AvatarKathOriginaul /> */}
             <div className="text-center md:text-left max-w-xl">
               <h2 className="text-3xl font-bold mb-4 flex items-center justify-center md:justify-start">
                 <Leaf className="mr-2 h-7 w-7 text-primary" />
@@ -113,9 +111,9 @@ export default function LandingPage() {
           <h2 className="text-4xl font-normal leading-none tracking-normal mb-10">¿Qué obtendrás haciendo tu web conmigo?</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
             {[
-              { svg: "/svgs/cool.svg", alt: "Icono de pulgar arriba moderno", text: "Que se ve genial.", dataAiHint: "illustration icon" },
-              { svg: "/svgs/devices.svg", alt: "Icono de múltiples dispositivos", text: "Que funciona en todos los dispositivos.", dataAiHint: "illustration icon" },
-              { svg: "/svgs/google.svg", alt: "Icono de logo de Google", text: "Que te encuentran en Google.", dataAiHint: "illustration icon" },
+              { svg: "/svgs/img1.svg", alt: "Icono de pulgar arriba moderno", text: "Que se ve genial.", dataAiHint: "illustration icon" },
+              { svg: "/svgs/img2.svg", alt: "Icono de múltiples dispositivos", text: "Que funciona en todos los dispositivos.", dataAiHint: "illustration icon" },
+              { svg: "/svgs/img3.svg", alt: "Icono de logo de Google", text: "Que te encuentran en Google.", dataAiHint: "illustration icon" },
               { svg: "/svgs/maps.svg", alt: "Icono de pin de mapa estilizado", text: "Y que haga que tus huéspedes digan “¡quiero ir!”." , dataAiHint: "illustration icon"},
             ].map((item, index) => (
               <div key={index} className="flex flex-col items-center p-6">
@@ -137,7 +135,7 @@ export default function LandingPage() {
               Te ofrezco 3 planes simples para que elijas según lo que tu alojamiento necesita hoy para más reservas y sin comisiones.
             </p>
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="text-left bg-card border-0 shadow-none">
+              <Card className="text-left bg-card shadow-lg">
                 <CardHeader>
                   <CardTitle className="text-2xl">Plan Básico</CardTitle>
                 </CardHeader>
@@ -145,7 +143,7 @@ export default function LandingPage() {
                   <p className="text-muted-foreground">Una web de una página con todo lo esencial para que te encuentren y reserven fácil.</p>
                 </CardContent>
               </Card>
-              <Card className="text-left bg-card relative border-0 shadow-none">
+              <Card className="text-left bg-card relative shadow-lg border-2 border-secondary">
                 <div className={masElegidoBadgeStyle}>Más elegido</div>
                 <CardHeader>
                   <CardTitle className="text-2xl">Plan Intermedio</CardTitle>
@@ -154,7 +152,7 @@ export default function LandingPage() {
                   <p className="text-muted-foreground">Ideal para mostrar cada espacio y recibir reservas directas sin depender de portales.</p>
                 </CardContent>
               </Card>
-              <Card className="text-left bg-card border-0 shadow-none">
+              <Card className="text-left bg-card shadow-lg">
                 <CardHeader>
                   <CardTitle className="text-2xl">Plan Premium</CardTitle>
                 </CardHeader>
@@ -219,10 +217,7 @@ export default function LandingPage() {
             <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
               Te cuento todo acá en este documento PDF, que incluye información ampliada de nuestros servicios.
             </p>
-            <Button size="lg" className={`${darkButtonStyle} px-8 py-3`}>
-              <Download className="mr-2 h-5 w-5" />
-              Descargar PDF
-            </Button>
+            <DownloadButton /> {/* Replace the old button with the new component */}
           </div>
         </section>
       </div>
