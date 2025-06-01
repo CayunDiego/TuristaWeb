@@ -114,9 +114,9 @@ export default function LandingPage() {
           <h2 className="text-4xl font-normal leading-none tracking-normal mb-10">¿Qué obtendrás haciendo tu web conmigo?</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
             {[
-              { svg: "/svgs/img1.svg", alt: "Icono de pulgar arriba moderno", text: "Que se ve genial.", dataAiHint: "illustration icon" },
-              { svg: "/svgs/img2.svg", alt: "Icono de múltiples dispositivos", text: "Que funciona en todos los dispositivos.", dataAiHint: "illustration icon" },
-              { svg: "/svgs/img3.svg", alt: "Icono de logo de Google", text: "Que te encuentran en Google.", dataAiHint: "illustration icon" },
+              { svg: "/svgs/cool.svg", alt: "Icono de pulgar arriba moderno", text: "Que se ve genial.", dataAiHint: "illustration icon" },
+              { svg: "/svgs/devices.svg", alt: "Icono de múltiples dispositivos", text: "Que funciona en todos los dispositivos.", dataAiHint: "illustration icon" },
+              { svg: "/svgs/google.svg", alt: "Icono de logo de Google", text: "Que te encuentran en Google.", dataAiHint: "illustration icon" },
               { svg: "/svgs/maps.svg", alt: "Icono de pin de mapa estilizado", text: "Y que haga que tus huéspedes digan “¡quiero ir!”." , dataAiHint: "illustration icon"},
             ].map((item, index) => (
               <div key={index} className="flex flex-col items-center p-6">
