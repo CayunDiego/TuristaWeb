@@ -21,6 +21,7 @@ const masElegidoBadgeStyle = "bg-[hsl(var(--section-teal-bg))] text-[hsl(var(--s
 
 export default function LandingPage() {
   const whatsappLink = "https://wa.me/5491123919463?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20dise%C3%B1o%20web%20para%20turismo.";
+  const demoUrl = "https://shautiau.vercel.app/";
   return (
     <div className="flex flex-col text-foreground">
       {/* Hero Section */}
@@ -62,8 +63,10 @@ export default function LandingPage() {
             <h1 className="font-kumbh-sans text-4xl md:text-6xl font-bold mb-8 max-w-3xl mx-auto">
               Tu sitio web propio para alojamientos que quieren <span className="text-secondary">más reservas</span> y <span className="text-secondary">sin comisiones</span>
             </h1>
-            <Button size="lg" className={`${greenButtonStyle} px-8 py-3`}>
-              Quiero ver una demo
+            <Button size="lg" className={`${greenButtonStyle} px-8 py-3`} asChild>
+              <a href={demoUrl} target="_blank" rel="noopener noreferrer">
+                Quiero ver una demo
+              </a>
             </Button>
           </div>
         </div>
@@ -122,7 +125,11 @@ export default function LandingPage() {
               </div>
             ))}
           </div>
-          <Button size="lg" className={`${greenButtonStyle} px-8 py-3`}>Ver Demo</Button>
+          <Button size="lg" className={`${greenButtonStyle} px-8 py-3`} asChild>
+            <a href={demoUrl} target="_blank" rel="noopener noreferrer">
+              Ver Demo
+            </a>
+          </Button>
         </div>
       </section>
 
@@ -162,7 +169,11 @@ export default function LandingPage() {
               </Card>
             </div>
             <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4">
-              <Button size="lg" className={`${greenButtonStyle} px-8 py-3`}>Quiero ver un avance</Button>
+              <Button size="lg" className={`${greenButtonStyle} px-8 py-3`} asChild>
+                <a href={demoUrl} target="_blank" rel="noopener noreferrer">
+                  Quiero ver un avance
+                </a>
+              </Button>
               <Button size="lg" className={`${darkButtonStyle} px-8 py-3`} asChild>
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                   Hablar por Whatsapp
@@ -224,4 +235,3 @@ export default function LandingPage() {
     </div>
   );
 }
-
