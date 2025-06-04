@@ -29,7 +29,7 @@ const WhatYoullGetSection: React.FC<WhatYoullGetSectionProps> = ({ demoUrl, gree
       }}
     >
       <div className="container mx-auto px-4 text-center">
-        <div className="flex items-center justify-center gap-x-4 mb-10">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-x-4 mb-10">
           <Image
             src="/images/rocket.gif"
             alt="Cohete animado"
