@@ -72,8 +72,7 @@ export function AvatarKath() {
       );
     };
 
-    // La animación de corazones solo se activa si el mouse está encima Y el easter egg de la foto NO está activo
-    if (isMouseOver && !showEasterEggFoto) {
+    if (isMouseOver) {
       const interval = setInterval(() => {
         createHeart();
         animateHearts();
@@ -83,8 +82,8 @@ export function AvatarKath() {
       setHearts([]); // Limpia los corazones si el mouse no está encima o si el easter egg de la foto se activó
       return undefined;
     }
-  }, [isMouseOver, showEasterEggFoto]); // Dependencias: isMouseOver y showEasterEggFoto
-
+  }, [isMouseOver]);
+  
   const handleMouseEnter = () => {
     timeoutRef.current = setTimeout(() => {
       setIsMouseOver(true);
