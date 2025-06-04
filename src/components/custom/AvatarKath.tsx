@@ -34,9 +34,9 @@ function getRandom(min: number, max: number) {
   return Math.random() * (max - min) + min;
 }
 
-const TIME_HEART = 2000
+const TIME_HEART = 5000
 
-function AvatarKath() {
+export function AvatarKath() {
   const [clickCount, setClickCount] = useState(0);
   const [showEasterEggFoto, setShowEasterEggFoto] = useState(false); // Estado para el easter egg de la foto
   const [hearts, setHearts] = useState<Heart[]>([]);
@@ -126,6 +126,9 @@ function AvatarKath() {
   return (
     <>
       <div style={avatarContainerStyle}>
+        {showEasterEggFoto && (
+          <div className="heart">💗</div>
+        )}
         <Avatar
           id="avatar-kath"
           className="w-32 h-32 md:w-40 md:h-40 shadow-lg"
@@ -164,5 +167,3 @@ function AvatarKath() {
     </>
   );
 }
-
-export default AvatarKath;

@@ -4,7 +4,6 @@ import { Leaf, MessageSquare } from "lucide-react";
 import Image from 'next/image';
 
 const Footer = () => {
-  const darkButtonStyle = "bg-foreground text-primary hover:bg-foreground/90 shadow-md rounded-lg font-bold text-base leading-none tracking-normal";
   const whatsappLink = "https://wa.me/5491123919463?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20dise%C3%B1o%20web%20para%20turismo.";
   
   return (
@@ -24,12 +23,12 @@ const Footer = () => {
         <div className="absolute inset-0 -z-10" style={{ backgroundColor: '#0000008C' }}></div> {/* Overlay oscuro */}
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl font-bold mb-6">🌿 Enfoque cercano y natural</h2>
-          <p className="text-xl mb-8 max-w-lg mx-auto">
-            Convertir &lt;datos&gt; en reservas. <br /> Diseñamos la web que tu alojamiento necesita para destacar y vender más.
+          <p className="font-sans font-semibold text-2xl leading-[1.6] tracking-normal mb-8 max-w-lg mx-auto">
+            Convierte visitas en reservas.<br /> Diseñamos la web que tu alojamiento necesita para destacar y vender más.
           </p>
           <Button 
             size="lg" 
-            className={`${darkButtonStyle} px-10 py-4 text-base border border-[hsl(var(--section-teal-bg))]`}
+            className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-md rounded-lg font-bold text-base leading-none tracking-normal px-10 py-4"
             asChild
           >
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
