@@ -9,7 +9,7 @@ interface WhatYoullGetSectionProps {
 
 const WhatYoullGetSection: React.FC<WhatYoullGetSectionProps> = ({ demoUrl, greenButtonStyle }) => {
   const items = [
-    { svg: "/svgs/cool.svg", alt: "Icono de pulgar arriba moderno", text: "Que se ve genial.", dataAiHint: "illustration icon" },
+    { svg: "/svgs/cool.svg", alt: "Icono de pulgar arriba moderno", text: "Que se vea genial.", dataAiHint: "illustration icon" },
     { svg: "/svgs/devices.svg", alt: "Icono de múltiples dispositivos", text: "Que funciona en todos los dispositivos.", dataAiHint: "illustration icon" },
     { svg: "/svgs/google.svg", alt: "Icono de logo de Google", text: "Que te encuentran en Google.", dataAiHint: "illustration icon" },
     {
